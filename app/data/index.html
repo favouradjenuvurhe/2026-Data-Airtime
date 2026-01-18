@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+
+  <!-- ✅ MOBILE ESSENTIAL -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
   <title>Data Purchase</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -11,6 +15,7 @@
   <style>
     body {
       font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-text-size-adjust: 100%;
     }
   </style>
 </head>
@@ -108,13 +113,17 @@
       type="tel"
       v-model="phone"
       maxlength="11"
+      inputmode="numeric"
       class="w-full bg-white rounded-lg px-4 py-3 shadow text-lg outline-none"
       placeholder="080xxxxxxxx"
     />
   </div>
 
   <!-- Purchase Button -->
-  <div class="fixed bottom-0 left-0 right-0 bg-[#F9F9F9] p-6">
+  <div
+    class="fixed bottom-0 left-0 right-0 bg-[#F9F9F9] p-6"
+    style="padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));"
+  >
     <button
       @click="submit"
       :disabled="!isValid"
