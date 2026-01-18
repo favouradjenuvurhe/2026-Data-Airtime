@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+
+  <!-- ✅ REQUIRED FOR MOBILE -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
   <title>Wallet Dashboard</title>
 
   <!-- Tailwind CSS -->
@@ -20,148 +24,145 @@
   </style>
 </head>
 
-<body class="bg-[#F9F9F9]">
+<body class="bg-[#F9F9F9] text-black">
 
-  <!-- Dashboard -->
-  <div id="app" class="max-w-md mx-auto pb-24">
+<!-- App Wrapper -->
+<div id="app" class="max-w-md mx-auto min-h-screen pb-28">
 
-    <!-- Header -->
-    <div class="flex items-center justify-between px-6 pt-6">
-      <div class="flex items-center gap-3">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpehW36y2RYXr_L5BFQDA4GBYjpdmAdwlP33-1nmLfOA&s=10"
-          class="w-10 h-10 rounded-full"
-        />
-        <p class="font-semibold text-sm">Hello favour!</p>
-      </div>
-
-      <div class="flex gap-3">
-        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow">
-          <i data-lucide="headphones" class="w-5 h-5"></i>
-        </div>
-        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow">
-          <i data-lucide="bell" class="w-5 h-5"></i>
-        </div>
-      </div>
+  <!-- Header -->
+  <div class="flex items-center justify-between px-4 pt-6">
+    <div class="flex items-center gap-3">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpehW36y2RYXr_L5BFQDA4GBYjpdmAdwlP33-1nmLfOA&s=10"
+        class="w-10 h-10 rounded-full object-cover"
+      />
+      <p class="font-semibold text-sm">Hello favour 👋</p>
     </div>
 
-    <!-- Wallet Card -->
-    <div class="mx-6 mt-6 bg-white rounded-2xl p-5 shadow">
-      <p class="text-gray-400 text-sm">Wallet Balance</p>
-
-      <div class="flex items-center justify-between mt-1">
-        <h2 class="text-3xl font-bold">₦50,000.00</h2>
-
-        <button class="flex items-center gap-1 bg-gray-100 px-3 py-2 rounded-full text-sm font-medium">
-          <i data-lucide="arrow-up-circle" class="w-4 h-4"></i>
-          Topup
-        </button>
-      </div>
-
-      <div class="flex gap-4 mt-5">
-        <button class="flex-1 bg-gray-100 py-3 rounded-xl flex items-center justify-center gap-2 font-medium">
-          <i data-lucide="phone" class="w-5 h-5"></i>
-          Buy Airtime
-        </button>
-
-        <button class="flex-1 bg-gray-100 py-3 rounded-xl flex items-center justify-center gap-2 font-medium">
-          <i data-lucide="globe" class="w-5 h-5"></i>
-          Buy Data
-        </button>
-      </div>
+    <div class="flex gap-2">
+      <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow">
+        <i data-lucide="headphones" class="w-5 h-5"></i>
+      </button>
+      <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow">
+        <i data-lucide="bell" class="w-5 h-5"></i>
+      </button>
     </div>
-
-    <!-- Promo Card -->
-    <div class="mx-6 mt-5 bg-white rounded-2xl p-5 shadow flex items-center justify-between">
-      <div>
-        <h3 class="font-semibold">Buy MTN Data</h3>
-        <p class="text-sm text-gray-500 mt-1">
-          Get 10% more data when<br />you buy MTN data
-        </p>
-      </div>
-
-      <div class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center">
-        <img
-          src="https://pulsepoint.com.ng/img/MTN.png"
-          alt="MTN"
-          class="w-12 h-12 object-contain"
-        />
-      </div>
-    </div>
-
-    <!-- Recent Transactions -->
-    <div class="mx-6 mt-6 bg-white rounded-2xl shadow overflow-hidden">
-      <div class="flex justify-between items-center px-5 py-4 border-b">
-        <p class="font-semibold">Recent Transaction</p>
-        <p class="text-sm font-medium">See All</p>
-      </div>
-
-      <!-- MTN -->
-      <div class="flex justify-between items-center px-5 py-4 border-b">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center">
-            <img src="https://pulsepoint.com.ng/img/MTN.png" class="w-6 h-6" />
-          </div>
-          <div>
-            <p class="font-medium">Data</p>
-            <p class="text-xs text-gray-400">Jan 17, 2026</p>
-          </div>
-        </div>
-
-        <div class="text-right">
-          <p class="font-semibold">₦2,000.00</p>
-          <p class="text-xs text-green-600 font-medium">Successful</p>
-        </div>
-      </div>
-
-      <!-- Airtel -->
-      <div class="flex justify-between items-center px-5 py-4">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
-            <img src="https://pulsepoint.com.ng/img/AIRTEL.png" class="w-6 h-6" />
-          </div>
-          <div>
-            <p class="font-medium">Airtime</p>
-            <p class="text-xs text-gray-400">Jan 17, 2026</p>
-          </div>
-        </div>
-
-        <div class="text-right">
-          <p class="font-semibold">₦2,000.00</p>
-          <p class="text-xs text-green-600 font-medium">Successful</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bottom Navigation -->
-    <div class="fixed bottom-0 left-0 right-0 bg-white border-t flex justify-around py-3">
-      <div class="flex flex-col items-center text-black">
-        <i data-lucide="home" class="w-6 h-6"></i>
-        <span class="text-xs font-medium">Home</span>
-      </div>
-
-      <div class="flex flex-col items-center text-gray-400">
-        <i data-lucide="circle-arrow-out-up-right" class="w-6 h-6"></i>
-        <span class="text-xs">Transaction</span>
-      </div>
-
-      <div class="flex flex-col items-center text-gray-400">
-        <i data-lucide="circle-arrow-out-down-left" class="w-6 h-6"></i>
-        <span class="text-xs">Wallet</span>
-      </div>
-
-      <div class="flex flex-col items-center text-gray-400">
-        <i data-lucide="user" class="w-6 h-6"></i>
-        <span class="text-xs">Profile</span>
-      </div>
-    </div>
-
   </div>
 
-  <script>
-    Vue.createApp({}).mount('#app')
-    lucide.createIcons()
-  </script>
+  <!-- Wallet Card -->
+  <div class="mx-4 mt-6 bg-white rounded-2xl p-5 shadow-sm">
+    <p class="text-gray-400 text-sm">Wallet Balance</p>
+
+    <div class="flex items-center justify-between mt-2">
+      <h2 class="text-3xl font-bold">₦50,000.00</h2>
+
+      <button class="flex items-center gap-1 bg-gray-100 px-4 py-2 rounded-full text-sm font-medium">
+        <i data-lucide="arrow-up-circle" class="w-4 h-4"></i>
+        Top up
+      </button>
+    </div>
+
+    <div class="grid grid-cols-2 gap-3 mt-5">
+      <button class="h-12 bg-gray-100 rounded-xl flex items-center justify-center gap-2 font-medium">
+        <i data-lucide="phone" class="w-5 h-5"></i>
+        Airtime
+      </button>
+
+      <button class="h-12 bg-gray-100 rounded-xl flex items-center justify-center gap-2 font-medium">
+        <i data-lucide="globe" class="w-5 h-5"></i>
+        Data
+      </button>
+    </div>
+  </div>
+
+  <!-- Promo Card -->
+  <div class="mx-4 mt-5 bg-white rounded-2xl p-5 shadow-sm flex items-center justify-between">
+    <div>
+      <h3 class="font-semibold text-sm">Buy MTN Data</h3>
+      <p class="text-xs text-gray-500 mt-1 leading-snug">
+        Get 10% more data when you buy MTN data
+      </p>
+    </div>
+
+    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center">
+      <img src="https://pulsepoint.com.ng/img/MTN.png" class="w-10 h-10" />
+    </div>
+  </div>
+
+  <!-- Recent Transactions -->
+  <div class="mx-4 mt-6 bg-white rounded-2xl shadow-sm overflow-hidden">
+    <div class="flex justify-between items-center px-4 py-4 border-b">
+      <p class="font-semibold text-sm">Recent Transactions</p>
+      <p class="text-xs font-medium text-gray-500">See all</p>
+    </div>
+
+    <!-- Transaction Item -->
+    <div class="flex justify-between items-center px-4 py-4 border-b">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center">
+          <img src="https://pulsepoint.com.ng/img/MTN.png" class="w-6 h-6" />
+        </div>
+        <div>
+          <p class="font-medium text-sm">Data</p>
+          <p class="text-xs text-gray-400">Jan 17, 2026</p>
+        </div>
+      </div>
+
+      <div class="text-right">
+        <p class="font-semibold text-sm">₦2,000</p>
+        <p class="text-xs text-green-600 font-medium">Successful</p>
+      </div>
+    </div>
+
+    <div class="flex justify-between items-center px-4 py-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
+          <img src="https://pulsepoint.com.ng/img/AIRTEL.png" class="w-6 h-6" />
+        </div>
+        <div>
+          <p class="font-medium text-sm">Airtime</p>
+          <p class="text-xs text-gray-400">Jan 17, 2026</p>
+        </div>
+      </div>
+
+      <div class="text-right">
+        <p class="font-semibold text-sm">₦2,000</p>
+        <p class="text-xs text-green-600 font-medium">Successful</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Bottom Navigation -->
+<div class="fixed bottom-0 left-0 right-0 bg-white border-t pb-safe">
+  <div class="max-w-md mx-auto flex justify-around py-3">
+    <button class="flex flex-col items-center text-black">
+      <i data-lucide="home" class="w-6 h-6"></i>
+      <span class="text-xs font-medium">Home</span>
+    </button>
+
+    <button class="flex flex-col items-center text-gray-400">
+      <i data-lucide="circle-arrow-out-up-right" class="w-6 h-6"></i>
+      <span class="text-xs">Transactions</span>
+    </button>
+
+    <button class="flex flex-col items-center text-gray-400">
+      <i data-lucide="circle-arrow-out-down-left" class="w-6 h-6"></i>
+      <span class="text-xs">Wallet</span>
+    </button>
+
+    <button class="flex flex-col items-center text-gray-400">
+      <i data-lucide="user" class="w-6 h-6"></i>
+      <span class="text-xs">Profile</span>
+    </button>
+  </div>
+</div>
+
+<script>
+  Vue.createApp({}).mount('#app')
+  lucide.createIcons()
+</script>
 
 </body>
-</html>
+  </html>
